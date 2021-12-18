@@ -1,0 +1,301 @@
+@font-face {
+  font-family: "NatoSans";
+  src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RailwayBold";
+  src: url("../fonts/railway/static/Raleway-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Railway";
+  src: url("../fonts/railway/static/Raleway-Regular.ttf") format("truetype");
+}
+
+:root {
+  --primary-color: #2a41cb;
+  --white-color: #ffffff;
+  --primary-dark: #0d1440;
+  --white-shade: #f2f8ff;
+  --gradient-primary: linear-gradient(90deg, #2a41cb 31.27%, #6177f2 99.25%);
+  --primary-70: #91a0f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "NotoSans", sans-serif;
+  color: var(--primary-dark);
+}
+
+/* body img {
+  width: 100%;
+  height: 100%;
+} */
+
+/* ---- header styling ------*/
+header {
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.list ul {
+  list-style: none;
+}
+
+.list ul > li {
+  display: inline-block;
+}
+
+.list ul a {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+header .btns > a:first-child {
+  margin-right: 1rem;
+}
+
+/* ---- hero styling ------*/
+section.hero {
+  background: var(--white-shade);
+}
+
+section.hero .copy {
+  padding: 6rem 0 6rem 4rem;
+}
+
+section.hero h1 {
+  font-family: "RailwayBold", sans-serif;
+  font-weight: 800;
+  font-size: 55px;
+  /* line-height: 75px; */
+}
+
+section.hero p {
+  color: var(--primary-dark);
+}
+
+section.hero img {
+  width: 100%;
+  height: 100%;
+}
+
+section.hero button {
+  box-shadow: 0px 20px 40px rgba(42, 65, 203, 0.25);
+  border-radius: 4px;
+  background: var(--gradient-primary);
+  color: #ffffff;
+  width: 218px;
+  padding: 0.8rem 0;
+}
+
+/* ---- product styling ------*/
+section.product {
+  background: var(--white-color);
+}
+section.product .container {
+  padding: 6rem 2rem;
+}
+section.product h2 {
+  font-weight: 600;
+}
+section.product p {
+  font-family: "Railway", sans-serif;
+}
+section.product .card {
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+section.product .card h4 {
+  font-size: 1.2rem;
+}
+section.product .card p {
+  font-size: 0.75rem;
+  padding: 0 1rem;
+}
+section.product .card button {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem 0.2rem 1rem;
+}
+section.product .card.white-shade {
+  background: var(--white-shade);
+  height: 300px;
+}
+
+/* ---- ipay-use styling ------*/
+section.ipay-use {
+  background: var(--white-shade);
+  height: 100vh;
+}
+
+section.ipay-use .container {
+  padding: 6rem 2rem;
+}
+section.ipay-use .container > h2 {
+  text-align: center;
+  font-weight: 600;
+}
+section.ipay-use .slider-container {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  direction: rtl;
+}
+
+section.ipay-use .slider {
+  display: flex;
+  direction: ltr;
+  margin-left: 6rem;
+}
+
+section.ipay-use .slider .row {
+  height: 400px;
+}
+
+section.ipay-use .slider img {
+  width: 100%;
+  height: 100%;
+}
+
+section.ipay-use .slider .copy {
+  padding: 6rem 0 6rem 3rem;
+}
+
+section.ipay-use .copy h2 {
+  font-family: "NatoSans", sans-serif;
+  font-weight: 900;
+}
+
+section.ipay-use .dots {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+section.ipay-use .dot {
+  width: 1rem;
+  height: 1rem;
+  background: var(--primary-70);
+  border-radius: 50%;
+}
+
+section.ipay-use .dot.active {
+  background: var(--primary-color);
+}
+
+/* ---- utils ------*/
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 4px;
+  height: 40px;
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.btn-outline.btn-primary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+  width: 109px;
+  font-weight: 500;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  section.ipay-use .dot {
+    margin-left: 1rem;
+  }
+  section.ipay-use .dots img:first-child {
+    margin-left: 1rem;
+    transform: rotate(-90deg);
+  }
+  section.ipay-use .dots img:last-child {
+    margin-left: 1rem;
+    transform: rotate(-90deg);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  section.ipay-use .slider-container {
+    overflow-y: scroll;
+  }
+
+  /*-------- scrollbar ----------*/
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(170, 170, 170, 0.5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--white-color);
+  }
+
+  section.ipay-use .slider-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 0px;
+    border: none;
+  }
+
+  section.ipay-use .slider-container::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: var(--primary-70);
+    margin-top: 2rem;
+    bottom: 2rem;
+  }
+
+  section.ipay-use .slider-container::-webkit-scrollbar:vertical {
+    width: 8px;
+  }
+
+  section.ipay-use .dot {
+    margin-top: 1.5rem;
+  }
+
+  section.ipay-use .dots img:last-child {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
