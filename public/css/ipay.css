@@ -31,6 +31,7 @@
 body {
   font-family: "NotoSans", sans-serif;
   color: var(--primary-dark);
+  overflow-x: hidden;
 }
 
 /* body img {
@@ -40,8 +41,8 @@ body {
 
 /* ---- header styling ------*/
 header {
-  padding-right: 4rem;
-  padding-left: 4rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 header .container {
@@ -71,10 +72,6 @@ header .btns > a:first-child {
 /* ---- hero styling ------*/
 section.hero {
   background: var(--white-shade);
-}
-
-section.hero .copy {
-  padding: 6rem 0 6rem 4rem;
 }
 
 section.hero h1 {
@@ -219,6 +216,47 @@ section.ipay-use .dot.active {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  header .showcase {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+  header .showcase .list {
+    width: 100%;
+  }
+
+  header .showcase .list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .showcase ul li {
+   padding: .5rem 0;
+  }
+
+  header .showcase .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .showcase .btns a {
+    width: 240px;
+  }
+
+  header .showcase .btns a:last-child {
+    margin-top: 1rem;
+    width: 240px;
+  }
+
   section.ipay-use .dot {
     margin-left: 1rem;
   }
@@ -242,6 +280,18 @@ section.ipay-use .dot.active {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  header {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+  header .list {
+    margin-right: 12rem;
+  }
+
+  section.hero .copy {
+    padding: 6rem 0 6rem 4rem;
+  }
+
   section.ipay-use .slider-container {
     overflow-y: scroll;
   }
