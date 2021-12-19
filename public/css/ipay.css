@@ -155,7 +155,6 @@ section.ipay-use .container > h2 {
 
 section.ipay-use .swiper-wrapper {
   height: 400px;
-  margin-left: 4rem;
 }
 
 /* section.ipay-use .slider {
@@ -172,6 +171,9 @@ section.ipay-use .swiper-wrapper {
 
 section.ipay-use .swiper-scrollbar {
   left: 3px;
+  height: 15rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 section.ipay-use .container > div {
@@ -182,15 +184,18 @@ section.ipay-use .swiper-scrollbar {
   background: var(--primary-70);
 }
 
-section.ipay-use .swiper-scrollbar-drag{
-background: var(--primary-color);
+section.ipay-use .swiper-scrollbar-drag {
+  background: var(--primary-color);
 }
 
 section.ipay-use .row {
   height: 400px;
+  /* margin-left: 0rem; */
+  padding-right: 4rem;
+  padding-left: 4rem;
 }
 
-section.ipay-use .row >div {
+section.ipay-use .row > div {
   height: 400px;
 }
 
@@ -340,25 +345,46 @@ section.ipay-use .swiper-pagination-bullet-active {
     height: 400px;
   }
 
-  .swiper-button-prev {
-    background-image: url("../images/icons/Arrow\ down\ 3.png") !important;
-    background-repeat: no-repeat;
-    right: 1px !important;
-    left: auto !important;
-    transform: rotate(180deg);
-    top: 5px !important;
-  }
   .swiper-button-prev::after {
     content: "" !important;
+    width: 2rem;
+    background-color: var(--primary-color);
+  }
+
+  .prevBtn {
+    position: absolute;
+    right: 2px !important;
+    left: auto !important;
+    transform: rotate(180deg);
+    top: 80px !important;
+    width: 1.5rem;
+    height: 1rem;
+    z-index: 5000;
   }
 
   .swiper-button-next {
-    background-image: url("../images/icons/Arrow\ down\ 4.png") !important;
+    /* background-image: url("../images/icons/Arrow\ down\ 4.png") !important; */
     background-repeat: no-repeat;
     right: 1px !important;
     left: auto !important;
     transform: rotate(180deg);
     top: calc(100% - 32px) !important;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    /* border: 1px solid blue; */
+  }
+
+  .nextBtn {
+    position: absolute;
+    right: 2px !important;
+    left: auto !important;
+    transform: rotate(180deg);
+    top: calc(100% - 90px) !important;
+    display: block;
+    width: 1.5rem;
+    height: 1rem;
+    z-index: 5000;
   }
 
   .swiper-button-next::after {

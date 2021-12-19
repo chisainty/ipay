@@ -21,7 +21,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 
-SwiperCore.use([Autoplay]);
+// SwiperCore.use([Autoplay]);
+SwiperCore.use([Navigation]);
 
 const Slider = () => {
   const [direction, setDirection] = useState("");
@@ -40,6 +41,15 @@ const Slider = () => {
     } else {
       setDirection("horizontal");
     }
+  });
+
+  useEffect(() => {
+    if (width > 600) {
+      setDirection("vertical");
+    } else {
+      setDirection("horizontal");
+    }
+    console.log(direction);
   }, [width]);
 
   useEffect(() => {
@@ -47,22 +57,27 @@ const Slider = () => {
     return () => window.removeEventListener("resize", updateWidth);
   });
 
-  console.log(direction);
-
   return (
     <div>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         direction={direction}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".nextBtn",
+          prevEl: ".prevBtn",
         }}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         className="mySwiper"
+
       >
+        <div className="swipeBtn nextBtn">
+          <img src="images/icons/Arrowdown4.png" alt=""/>
+        </div>
+        <div className="swipeBtn prevBtn">
+          <img src="images/icons/Arrowdown3.png" alt="" />
+        </div>
         {data.map((data, index) => {
           return (
             <SwiperSlide key={index}>

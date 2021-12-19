@@ -1,17 +1,14 @@
 import React from "react";
 const Slide = (props) => {
-  
   return (
     <div className="row">
       <div className="col-md-6">
-        <img src="images/features//Use-Image.png" alt="" />
+        <img src={props.data.img} alt="" />
       </div>
       <div className="col-md-6">
         <div className="copy">
           <h2 className="mb-4">{props.data.title}</h2>
-          <p>
-            Enjoy seamless ride when you choose to pay for your trips with iPay.
-          </p>
+          <p>{props.data.text}</p>
         </div>
       </div>
     </div>
