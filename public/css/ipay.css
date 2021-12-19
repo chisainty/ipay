@@ -154,6 +154,7 @@ section.ipay-use .container {
 section.ipay-use .container > h2 {
   text-align: center;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 /* section.ipay-use .slider-container {
   position: relative;
@@ -318,7 +319,7 @@ section.ipay-use .swiper-pagination-bullet-active {
   }
 
   section.hero .stores {
-    margin-top: .6rem;
+    margin-top: 0.6rem;
   }
 
   section.ipay-use .dot {
@@ -333,6 +334,10 @@ section.ipay-use .swiper-pagination-bullet-active {
   section.ipay-use .swiper-pagination-bullet img:last-child {
     margin-left: 1rem;
     transform: rotate(-90deg);
+  }
+
+  .swiper .async {
+    display: block;
   }
 }
 
@@ -358,7 +363,7 @@ section.ipay-use .swiper-pagination-bullet-active {
   }
   section.hero .stores {
     justify-content: start;
-    margin-top: -.1rem;
+    margin-top: -0.1rem;
   }
   section.ipay-use .slider-container {
     overflow: hidden;
@@ -368,6 +373,14 @@ section.ipay-use .swiper-pagination-bullet-active {
   .swiper-wrapper,
   .swiper {
     height: 400px;
+  }
+
+  .swiper .async {
+    display: none;
+  }
+
+  section.ipay-use .swiper-scrollbar {
+    display: none;
   }
 
   .swiper-button-prev::after {
@@ -458,11 +471,11 @@ section.ipay-use .swiper-pagination-bullet-active {
   }
 
   section.ipay-use .dot {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   section.ipay-use .dots img:last-child {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 }
 

@@ -28,29 +28,32 @@ const Slider = () => {
   const [direction, setDirection] = useState("");
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
+  const [asyncDisplay, setAsyncdisplay] = useState("");
+
+  const asyncRef = useRef();
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
     // setHeight(window.innerHeight);
-    console.log(window.innerWidth);
+  };
+
+  const updateSliderDirection = () => {
+    const asyncDisplay = window.getComputedStyle(asyncRef.current).display;
+    // console.log(asyncDisplay);
+    if (asyncDisplay == "none") {
+      setDirection("vertical");
+    } else if (asyncDisplay == "block") {
+      setDirection("horizontal");
+    }
   };
 
   useEffect(() => {
-    if (width > 600) {
-      setDirection("vertical");
-    } else {
-      setDirection("horizontal");
-    }
-  });
+    updateSliderDirection();
+  }, [width]);
 
   useEffect(() => {
-    if (width > 600) {
-      setDirection("vertical");
-    } else {
-      setDirection("horizontal");
-    }
-    console.log(direction);
-  }, [width]);
+    updateSliderDirection();
+  }, []);
 
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
@@ -70,10 +73,10 @@ const Slider = () => {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         className="mySwiper"
-
       >
+        <div ref={asyncRef} className="async"></div>
         <div className="swipeBtn nextBtn">
-          <img src="images/icons/Arrowdown4.png" alt=""/>
+          <img src="images/icons/Arrowdown4.png" alt="" />
         </div>
         <div className="swipeBtn prevBtn">
           <img src="images/icons/Arrowdown3.png" alt="" />
