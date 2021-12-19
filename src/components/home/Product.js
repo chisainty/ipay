@@ -20,7 +20,7 @@ const Product = () => {
           <div className="col-md-1" />
           <div className="col-md-3">
             <div className="card white-shade">
-              <img src="images/icons/cash.png" width={80} alt="" srcSet />
+              <img src="images/icons/cash.png" width={80} alt="" />
               <h4>Saving made easier</h4>
               <p>
                 Save now and get prepared for things that may want to give you
@@ -32,7 +32,7 @@ const Product = () => {
           <div className="col-md-1" />
           <div className="col-md-3">
             <div className="card white-shade">
-              <img src="images/icons/stats.png" width={80} alt="" srcSet />
+              <img src="images/icons/stats.png" width={80} alt="" />
               <h4>Saving made easier</h4>
               <p>
                 Save now and get prepared for things that may want to give you
