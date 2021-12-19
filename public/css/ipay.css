@@ -178,6 +178,22 @@ section.ipay-use .container > div {
   height: 400px;
 }
 
+section.ipay-use .swiper-scrollbar {
+  background: var(--primary-70);
+}
+
+section.ipay-use .swiper-scrollbar-drag{
+background: var(--primary-color);
+}
+
+section.ipay-use .row {
+  height: 400px;
+}
+
+section.ipay-use .row >div {
+  height: 400px;
+}
+
 section.ipay-use .slider img {
   width: 100%;
   height: 100%;
