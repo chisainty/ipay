@@ -30,7 +30,7 @@ const Product = () => {
             </div>
           </div>
           <div className="col-md-1" />
-          <div className="col-md-3">
+          <div className="col-md-3 mt-4 mt-md-0">
             <div className="card white-shade">
               <img src="images/icons/stats.png" width={80} alt="" />
               <h4>Saving made easier</h4>
