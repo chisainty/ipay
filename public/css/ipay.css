@@ -385,14 +385,37 @@ section.ipay-use .swiper-pagination-bullet-active {
     padding-left: 1rem;
   }
 
+  .prevBtn {
+    position: absolute;
+    left: 2px !important;
+    transform: rotate(90deg);
+    top: calc(100% - 30px) !important;
+    width: 1.5rem;
+    height: 1rem;
+    z-index: 5000;
+  }
+  
+  .nextBtn {
+    position: absolute;
+    right: 2px !important;
+    left: auto !important;
+    transform: rotate(90deg);
+    top: calc(100% - 30px) !important;
+    display: block;
+    width: 1.5rem;
+    height: 1rem;
+    z-index: 5000;
+  }
+
   section.ipay-use .dots,
-section.ipay-use .swiper-pagination {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-}
+  section.ipay-use .swiper-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    height: 2rem;
+  }
 
   .swiper .async {
     display: block;
