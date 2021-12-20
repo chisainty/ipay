@@ -151,6 +151,7 @@ section.ipay-use {
 section.ipay-use .container {
   padding: 6rem 2rem;
 }
+
 section.ipay-use .container > h2 {
   text-align: center;
   font-weight: 600;
@@ -163,9 +164,9 @@ section.ipay-use .container > h2 {
   direction: rtl;
 } */
 
-section.ipay-use .swiper-wrapper {
+/* section.ipay-use .swiper-wrapper {
   height: 400px;
-}
+} */
 
 /* section.ipay-use .slider {
   display: flex;
@@ -221,6 +222,29 @@ section.ipay-use .slider .copy {
 section.ipay-use .copy h2 {
   font-family: "NatoSans", sans-serif;
   font-weight: 900;
+}
+
+.prevBtn {
+  position: absolute;
+  right: 2px !important;
+  left: auto !important;
+  transform: rotate(180deg);
+  top: 80px !important;
+  width: 1.5rem;
+  height: 1rem;
+  z-index: 5000;
+}
+
+.nextBtn {
+  position: absolute;
+  right: 2px !important;
+  left: auto !important;
+  transform: rotate(180deg);
+  top: calc(100% - 90px) !important;
+  display: block;
+  width: 1.5rem;
+  height: 1rem;
+  z-index: 5000;
 }
 
 section.ipay-use .dots,
@@ -336,6 +360,40 @@ section.ipay-use .swiper-pagination-bullet-active {
     transform: rotate(-90deg);
   }
 
+  section.ipay-use .container {
+    padding: 6rem 0;
+  }
+
+  section.ipay-use .swiper-wrapper {
+    width: 100vw;
+  }
+
+  section.ipay-use .swiper-scrollbar {
+    display: none;
+  }
+
+  .swiper-slide,
+  .swiper-wrapper,
+  .swiper {
+    height: fit-content;
+  }
+
+  section.ipay-use .row {
+    height: fit-content;
+    /* margin-left: 0rem; */
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  section.ipay-use .dots,
+section.ipay-use .swiper-pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
   .swiper .async {
     display: block;
   }
@@ -379,25 +437,10 @@ section.ipay-use .swiper-pagination-bullet-active {
     display: none;
   }
 
-  section.ipay-use .swiper-scrollbar {
-    display: none;
-  }
-
   .swiper-button-prev::after {
     content: "" !important;
     width: 2rem;
     background-color: var(--primary-color);
-  }
-
-  .prevBtn {
-    position: absolute;
-    right: 2px !important;
-    left: auto !important;
-    transform: rotate(180deg);
-    top: 80px !important;
-    width: 1.5rem;
-    height: 1rem;
-    z-index: 5000;
   }
 
   .swiper-button-next {
@@ -411,18 +454,6 @@ section.ipay-use .swiper-pagination-bullet-active {
     width: 1rem;
     height: 1rem;
     /* border: 1px solid blue; */
-  }
-
-  .nextBtn {
-    position: absolute;
-    right: 2px !important;
-    left: auto !important;
-    transform: rotate(180deg);
-    top: calc(100% - 90px) !important;
-    display: block;
-    width: 1.5rem;
-    height: 1rem;
-    z-index: 5000;
   }
 
   .swiper-button-next::after {
