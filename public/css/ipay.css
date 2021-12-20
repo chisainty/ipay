@@ -346,6 +346,22 @@ section.ipay-use .swiper-pagination-bullet-active {
     margin-top: 0.6rem;
   }
 
+  section.ipay-use {
+    height: fit-content;
+  }
+
+  section.ipay-use .container > div {
+    height: fit-content;
+  }
+
+  section.ipay-use .row > div {
+    height: fit-content;
+  }
+
+  section.ipay-use .slider .copy {
+    padding: 2rem 0 2rem 1rem;
+  }
+
   section.ipay-use .dot {
     margin-left: 1rem;
   }
@@ -387,17 +403,17 @@ section.ipay-use .swiper-pagination-bullet-active {
 
   .prevBtn {
     position: absolute;
-    left: 2px !important;
+    left: 10px !important;
     transform: rotate(90deg);
     top: calc(100% - 30px) !important;
     width: 1.5rem;
     height: 1rem;
     z-index: 5000;
   }
-  
+
   .nextBtn {
     position: absolute;
-    right: 2px !important;
+    right: 10px !important;
     left: auto !important;
     transform: rotate(90deg);
     top: calc(100% - 30px) !important;
