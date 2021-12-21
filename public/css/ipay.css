@@ -40,17 +40,17 @@ body {
 } */
 
 /* ---- header styling ------*/
-header {
-  padding-right: 1rem;
+/* header {
+  padding-right: 1rem; 
   padding-left: 1rem;
-}
+} */
 
-header .container {
+/* header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-}
+} */
 
 .list ul {
   list-style: none;

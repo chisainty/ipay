@@ -1,7 +1,7 @@
-import Header from "../components/home/Header";
-import Hero from "../components/home/Hero";
-import IpayUse from "../components/home/IpayUse";
-import Product from "../components/home/Product";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import IpayUse from "../components/IpayUse";
+import Product from "../components/Product";
 
 const Home = () => {
   return (

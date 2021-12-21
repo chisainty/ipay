@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useRef, useEffect } from "react";
-import data from "../../data";
+import data from "../data";
 import Slide from "./Slide";
 import SwiperCore, {
   Pagination,
