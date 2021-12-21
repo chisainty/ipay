@@ -18,7 +18,19 @@ export const Menu = styled.div`
 `;
 
 export const Showcase = styled.div`
-  /* display: ${({ display }) => display}; */
+  display: flex;
+  & ul {
+    list-style: none;
+  }
+
+  & ul > li {
+    display: inline-block;
+  }
+
+  & ul > li a {
+    text-decoration: none;
+    color: var(--primary-dark);
+  }
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     position: absolute;
@@ -26,7 +38,7 @@ export const Showcase = styled.div`
     left: 0;
     background: #ffffff;
     width: 100%;
-    display: flex;
+    display: ${({ display }) => display};
     align-items: center;
     flex-direction: column;
     padding-bottom: 2rem;
@@ -46,17 +58,17 @@ export const Showcase = styled.div`
       padding: 0.5rem 0;
     }
 
-    & > div::last-child {
+    & > div:last-child {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    & > div::last-child a {
+    & > div:last-child a {
       width: 240px;
     }
 
-    & > div::last-child a:last-child {
+    & > div:last-child a:last-child {
       margin-top: 1rem;
       width: 240px;
     }
