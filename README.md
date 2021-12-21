@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Live Preview
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://ipay-react.netlify.app/](https://ipay-react.netlify.app/) to view it in your browser.
