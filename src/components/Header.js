@@ -1,33 +1,33 @@
 import { useState } from "react";
 import { Container } from "./styles/utils/Container.styled";
-import { StyledHeader } from "./styles/Header.styled";
+import { StyledHeader, Nav, Menu, Showcase } from "./styles/Header.styled";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropDownDisplay, setDropDownDisplay] = useState("d-none");
+  const [dropDownDisplay, setDropDownDisplay] = useState("none");
 
   const updateMenuStatus = () => {
     if (menuOpen) {
       setMenuOpen(false);
-      setDropDownDisplay("");
+      setDropDownDisplay("block");
     } else {
       setMenuOpen(true);
-      setDropDownDisplay("d-none");
+      setDropDownDisplay("none");
     }
   };
 
   return (
     <StyledHeader>
       <Container>
-        <div>
-          <div className="logo">
+        <Nav>
+          <div>
             <img src="images/logo/iPay.png" width={110} alt="" />
           </div>
-          <div className="menu d-md-none" onClick={updateMenuStatus}>
+          <Menu onClick={updateMenuStatus}>
             <img src="images/icons/menu.png" height={20} alt="" />
-          </div>
-          <div className={"showcase " + dropDownDisplay + " d-md-flex"}>
-            <div className="list">
+          </Menu>
+          <Showcase display={dropDownDisplay}>
+            <div>
               <ul className="d-md-flex mt-2 mb-0">
                 <li className="mx-md-4">
                   <a href="#">Save</a>
@@ -52,8 +52,8 @@ const Header = () => {
                 Sign Up, It's Free
               </a>
             </div>
-          </div>
-        </div>
+          </Showcase>
+        </Nav>
       </Container>
     </StyledHeader>
   );

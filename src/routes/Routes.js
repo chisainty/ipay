@@ -13,6 +13,7 @@ const theme = {
     gradientPrimary: "linear-gradient(90deg, #2a41cb 31.27%, #6177f2 99.25%)",
     primary70: "#91a0f2",
   },
+  mobile: "768px",
 };
 
 const Routes = () => {

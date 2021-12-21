@@ -31,7 +31,7 @@
 body {
   font-family: "NotoSans", sans-serif;
   color: var(--primary-dark);
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 /* body img {
@@ -448,10 +448,10 @@ section.ipay-use .swiper-pagination-bullet-active {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  header {
+  /* header {
     padding-right: 4rem;
     padding-left: 4rem;
-  }
+  } */
   header .list {
     margin-right: 12rem;
   }
